@@ -44,7 +44,7 @@ async def dashscope_asr(pcm_data: bytes) -> str:
             f.write(pcm_data)
             
         def run_recognition():
-            recognition = Recognition(model='sensevoice-v1', format='pcm', sample_rate=16000, callback=DummyCallback())
+            recognition = Recognition(model='paraformer-realtime-v1', format='pcm', sample_rate=16000, callback=DummyCallback())
             return recognition.call(temp_audio)
             
         loop = asyncio.get_event_loop()

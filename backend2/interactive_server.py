@@ -108,7 +108,7 @@ async def process_user_input(user_text):
     logger.info(f"发送给大模型: {user_text}")
     try:
         response = await client.chat.completions.create(
-            model="deepseek-chat",
+            model="deepseek-v4-pro",
             messages=[
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": user_text}
